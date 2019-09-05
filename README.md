@@ -15,7 +15,7 @@ Starting this project I had only basic understanding of microservices. This proj
 
 ## Helpfull links
 * [The Geeky Platipus, Dockerise your PHP application with Nginx and PHP7-FPM](http://geekyplatypus.com/dockerise-your-php-application-with-nginx-and-php7-fpm/)
-* [Dcoker Hub - List of docker images](https://hub.docker.com/search?q=&type=image)
-* [All about microservices](https://microservices.io/)
 * [Bob Strecansky, How to Deploy Microservices with Docker](https://www.linode.com/docs/applications/containers/deploying-microservices-with-docker/)
 * [Mina Ayoub, Microservices Authentication and Authorization Solutions](https://medium.com/tech-tajawal/microservice-authentication-and-authorization-solutions-e0e5e74b248a)
+* [Docker Hub - List of docker images](https://hub.docker.com/search?q=&type=image)
+* [All about microservices](https://microservices.io/)
