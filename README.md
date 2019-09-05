@@ -9,9 +9,8 @@ Starting this project I had only basic understanding of microservices. This proj
 **Stage 1.**
 - [X] Which docker containers are needed
 > Containers will be needed for such stuff as server, database, cache, que manager, gui, rest api, and etc. For more details go to [Docker containers and its images](#docker-containers-and-its-images) section.
-- [ ] How to manage connection betwin containers
-- [ ] What is needed for environment setup
-- [ ] Define structure of application
+- [X] Define structure of application
+> Go to [Application structure](application-structure) section to see application structure
 
 ## Docker containers and its images
 **Serving application**
@@ -35,6 +34,9 @@ Redis is cacheing mechanism for application
 * [RabbitMQ](https://www.rabbitmq.com/), [docker image](https://hub.docker.com/_/rabbitmq)
 
 RabbitMQ is message brocker that will provide communication betwin different services
+
+## Application structure
+*Image needed*
 
 
 ## Helpfull links
