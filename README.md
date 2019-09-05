@@ -36,8 +36,7 @@ Redis is cacheing mechanism for application
 RabbitMQ is message brocker that will provide communication betwin different services
 
 ## Application structure
-*Image needed*
-
+![application structure](https://github.com/PauMin/micro-service/blob/master/application%20structure.png)
 
 ## Helpfull links
 * [The Geeky Platipus, Dockerise your PHP application with Nginx and PHP7-FPM](http://geekyplatypus.com/dockerise-your-php-application-with-nginx-and-php7-fpm/)
