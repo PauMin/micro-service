@@ -10,7 +10,7 @@ Starting this project I had only basic understanding of microservices. This proj
 - [X] Which docker containers are needed
 > Containers will be needed for such stuff as server, database, cache, que manager, gui, rest api, and etc. For more details go to [Docker containers and its images](#docker-containers-and-its-images) section.
 - [X] Define structure of application
-> Go to [Application structure](application-structure) section to see application structure
+> Go to [Application structure](#application-structure) section to see application structure
 
 ## Docker containers and its images
 **Serving application**
