@@ -7,11 +7,35 @@ Starting this project I had only basic understanding of microservices. This proj
 
 ## TODO
 **Stage 1.**
-- [ ] Define structure of application
-- [ ] What is needed for application setup
-- [ ] Which docker container are needed
-- [ ] How many containers should be
+- [X] Which docker containers are needed
+> Containers will be needed for such stuff as server, database, cache, que manager, gui, rest api, and etc. For more details go to [Docker containers and its images](#docker-containers-and-its-images) section.
 - [ ] How to manage connection betwin containers
+- [ ] What is needed for environment setup
+- [ ] Define structure of application
+
+## Docker containers and its images
+**Serving application**
+* [NGINX](https://www.nginx.com/), [docker image](https://hub.docker.com/_/nginx)
+
+NGINX will serve microservice application to the end-user.
+* [NODEJS](https://nodejs.org/en/), [docker image](https://hub.docker.com/_/node/)
+
+NODEJS will serve front part of application (Client-side GUI, Andmin-side GUI)
+
+**Storing data**
+* [MySQL](https://www.mysql.com/), [docker image](https://hub.docker.com/_/mysql)
+
+MySQL will be applications database that will store data separetely for each application service
+
+* [Redis](https://redis.io/), [docker image](https://hub.docker.com/_/redis)
+
+Redis is cacheing mechanism for application
+
+**Connection betwin services**
+* [RabbitMQ](https://www.rabbitmq.com/), [docker image](https://hub.docker.com/_/rabbitmq)
+
+RabbitMQ is message brocker that will provide communication betwin different services
+
 
 ## Helpfull links
 * [The Geeky Platipus, Dockerise your PHP application with Nginx and PHP7-FPM](http://geekyplatypus.com/dockerise-your-php-application-with-nginx-and-php7-fpm/)
