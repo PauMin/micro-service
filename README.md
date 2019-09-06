@@ -12,6 +12,9 @@ Starting this project I had only basic understanding of microservices. This proj
 - [X] Define structure of application
 > Go to [Application structure](#application-structure) section to see application structure
 
+**Stage 2.**
+- [ ] Setup project
+
 ## Docker containers and its images
 **Serving application**
 * [NGINX](https://www.nginx.com/), [docker image](https://hub.docker.com/_/nginx)
