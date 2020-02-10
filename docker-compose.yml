@@ -1,0 +1,56 @@
+version: "3"
+
+services:
+  #Nginx service
+  web:
+    image: nginx
+    ports:
+      - "8080:80"
+    links:
+      - client-gui
+      - admin-gui
+    volumes:
+      - ./services/nginx/conf/sites.conf:/etc/nginx/conf.d/sites.conf
+      - ./services/nginx/.htpasswd:/etc/nginx/.htpasswd
+      - ./storage/log/nginx/:/var/log/nginx/
+    environment:
+      - NGINX_PORT=80
+    networks:
+      - microservices
+
+  #Client GUI service
+  client-gui:
+    image: "node:13-alpine"
+    user: "node"
+    working_dir: /home/node/app
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes:
+      - ./services/client_gui/:/home/node/app
+    expose:
+      - "3000"
+    command: "npm start"
+    networks:
+      - microservices
+
+  #Admin GUI service
+  admin-gui:
+    image: "node:13-alpine"
+    user: "node"
+    working_dir: /home/node/app
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+    volumes:
+      - ./services/admin_gui/:/home/node/app
+    expose:
+      - "3001"
+    command: "npm start"
+    networks:
+      - microservices
+
+networks:
+  microservices:

@@ -22,12 +22,12 @@ Starting this project I had only basic understanding of microservices. This proj
 NGINX will serve microservice application to the end-user.
 * [NODEJS](https://nodejs.org/en/), [docker image](https://hub.docker.com/_/node/)
 
-NODEJS will serve front part of application (Client-side GUI, Andmin-side GUI)
+NODEJS will serve front part of application (Client-side GUI, Admin-side GUI)
 
 **Storing data**
 * [MySQL](https://www.mysql.com/), [docker image](https://hub.docker.com/_/mysql)
 
-MySQL will be applications database that will store data separetely for each application service
+MySQL will be applications database that will store data separately for each application service
 
 * [Redis](https://redis.io/), [docker image](https://hub.docker.com/_/redis)
 
@@ -36,10 +36,24 @@ Redis is cacheing mechanism for application
 **Connection betwin services**
 * [RabbitMQ](https://www.rabbitmq.com/), [docker image](https://hub.docker.com/_/rabbitmq)
 
-RabbitMQ is message brocker that will provide communication betwin different services
+RabbitMQ is message brocker that will provide communication between different services
 
 ## Application structure
 ![application structure](https://github.com/PauMin/micro-service/blob/master/application%20structure.png)
+
+## Project setup
+**1. Install Docker**
+
+I used Ubuntu as OS for project setup, so I followed installation guide from dockers 
+[documentation](https://docs.docker.com/install/linux/docker-ce/ubuntu/) for Linux
+
+**2. Project data organisation**
+
+To easily navigate inside project and prevent file mess, in future when project will grow, how to organise things
+should be decided on this stage.
+
+For my project I decided to organise file in next way:
+
 
 ## Helpfull links
 * [The Geeky Platipus, Dockerise your PHP application with Nginx and PHP7-FPM](http://geekyplatypus.com/dockerise-your-php-application-with-nginx-and-php7-fpm/)
