@@ -1,0 +1,10 @@
+{
+    "name": "pavmin/users",
+    "authors": [
+        {
+            "name": "pavmin",
+            "email": "pavels.minckovskis@mogofinance.com"
+        }
+    ],
+    "require": {}
+}

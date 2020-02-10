@@ -52,5 +52,13 @@ services:
     networks:
       - microservices
 
+  #User backend service
+  users:
+    build: ./services/users
+    volumes:
+      - ./vendor/:/usr/src/users/vendor
+    networks:
+      - microservices
+
 networks:
   microservices:
