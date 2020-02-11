@@ -1,0 +1,23 @@
+{
+  "name": "microservice",
+  "version": "1.0.0",
+  "description": "Approach to build microservice app using Docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PauMin/microservice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PauMin/microservice/issues"
+  },
+  "homepage": "https://github.com/PauMin/microservice#readme",
+  "dependencies": {
+    "amqplib": "^0.5.5",
+    "express": "^4.17.1"
+  }
+}

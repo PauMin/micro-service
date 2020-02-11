@@ -15,6 +15,9 @@ services:
       - ./storage/log/nginx/:/var/log/nginx/
     environment:
       - NGINX_PORT=80
+    depends_on:
+      - client-gui
+      - admin-gui
     networks:
       - microservices
 
@@ -29,10 +32,13 @@ services:
       - PORT=3000
     volumes:
       - ./services/client_gui/:/home/node/app
+      - ./node_modules/:/home/node/app/node_modules
     expose:
       - "3000"
     command: "npm start"
     depends_on:
+      - queue
+    links:
       - queue
     networks:
       - microservices
@@ -59,6 +65,7 @@ services:
   #User backend service
   users:
     build: ./services/users
+    restart: always
     volumes:
       - ./services/users/:/usr/src/users
       - ./vendor/:/usr/src/users/vendor
@@ -77,6 +84,7 @@ services:
       - "5672"
     volumes:
       - ./services/queue/:/etc/rabbitmq
+      - ./storage/log/rabbitmq/:/data/logs/rabbitmq
     networks:
       - microservices
 
