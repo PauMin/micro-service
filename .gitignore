@@ -1,2 +1,4 @@
 .idea
 storage/log/nginx/*
+/vendor/
+composer.lock

@@ -32,6 +32,8 @@ services:
     expose:
       - "3000"
     command: "npm start"
+    depends_on:
+      - queue
     networks:
       - microservices
 
@@ -49,6 +51,8 @@ services:
     expose:
       - "3001"
     command: "npm start"
+    depends_on:
+      - queue
     networks:
       - microservices
 
@@ -56,7 +60,23 @@ services:
   users:
     build: ./services/users
     volumes:
+      - ./services/users/:/usr/src/users
       - ./vendor/:/usr/src/users/vendor
+    depends_on:
+      - queue
+    links:
+      - queue
+    networks:
+      - microservices
+
+  # Message broker
+  queue:
+    image: "rabbitmq:3-management"
+    expose:
+      - "15672"
+      - "5672"
+    volumes:
+      - ./services/queue/:/etc/rabbitmq
     networks:
       - microservices
 

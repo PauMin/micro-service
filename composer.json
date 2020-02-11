@@ -1,10 +1,12 @@
 {
-    "name": "pavmin/users",
+    "name": "pavmin/microservice",
     "authors": [
         {
             "name": "pavmin",
             "email": "pavels.minckovskis@mogofinance.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php-amqplib/php-amqplib": "^2.11"
+    }
 }
