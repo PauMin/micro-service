@@ -76,6 +76,20 @@ services:
     networks:
       - microservices
 
+  #Post backend service
+  posts:
+    build: ./services/posts
+    restart: always
+    volumes:
+      - ./services/posts/:/usr/src/posts
+      - ./vendor/:/usr/src/posts/vendor
+    depends_on:
+      - queue
+    links:
+      - queue
+    networks:
+      - microservices
+
   # Message broker
   queue:
     image: "rabbitmq:3-management"

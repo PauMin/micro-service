@@ -20,13 +20,13 @@ while ($waitingConnection) {
 
 $channel = $connection->channel();
 
-$channel->queue_declare('users', false, false, false, false);
+$channel->queue_declare('posts', false, false, false, false);
 
-$channel->basic_consume('users', 'tag', false, false, false, false, 'say_hello');
+$channel->basic_consume('posts', 'tag', false, false, false, false, 'say_hello');
 
 function say_hello(AMQPMessage $message): void
 {
-    echo " [x] Received message in users. " . $message->getBody() . "\n";
+    echo " [x] Received message in posts. " . $message->getBody() . "\n";
 }
 
 echo " [*] Waiting for messages. To exit press CTRL+C\n";
